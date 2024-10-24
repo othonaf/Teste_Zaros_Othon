@@ -1,0 +1,32 @@
+{
+  "name": "teste_zaros_othon",
+  "version": "1.0.0",
+  "description": "Uma API de cadastro de usuários feita em Node.js com Express e Sequelize para o teste de admissão da Zaros.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./build/index.js",
+    "build": "tsc",
+    "dev": "nodemon src/index.ts",
+    "sequelize": "sequelize --config src/config/config.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7",
+    "sequelize-cli": "^6.6.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "pg": "^8.13.0",
+    "sequelize": "^6.37.4",
+    "sequelize-typescript": "^2.1.6",
+    "sqlite3": "^5.1.7"
+  }
+}
