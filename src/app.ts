@@ -1,6 +1,6 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
 import { sequelize } from './config/database'; 
-import { AddressInfo } from "net";
+import { AddressInfo } from "net";;
 
 const app = express();
 app.use(express.json()); 

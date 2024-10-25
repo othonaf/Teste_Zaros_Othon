@@ -6,7 +6,7 @@ import atualizaUsuario from "./atualizaUsuario";
 import deletaUsuario from "./deletaUsuario";
 
 // Rota para o endpoint de adicionar Usuario
-app.use('/', adicionaUsuario);
+app.use('/users', adicionaUsuario);
 
 // Rota para o endpoint de Pesquisa de Usuario
 app.use('/', pesquisaUsuario);
@@ -19,3 +19,5 @@ app.use('/', atualizaUsuario);
 
 // Rota para o endpoint de Deletar Dados de Usuário:
 app.use('/', deletaUsuario);
+
+export default app;
