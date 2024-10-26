@@ -10,7 +10,7 @@ sequelize.sync().then(() => {
   console.log('Database synced!');
 });
 
-const server = app.listen(process.env.PORT || 3003, () => {
+export const server = app.listen(process.env.PORT || 3003, () => {
       if (server) {
         const address = server.address() as AddressInfo;
         console.log(`Servidor rodando em ${address.address}:${address.port}`);

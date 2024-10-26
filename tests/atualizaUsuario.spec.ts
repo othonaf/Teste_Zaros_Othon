@@ -1,6 +1,7 @@
 import request from 'supertest';
 import app from '../src/index';
 import User from '../src/models/user';
+import { server } from '../src/app';
 
 describe('Testes para o endpoint de atualização de usuário', () => {
 
@@ -17,6 +18,7 @@ describe('Testes para o endpoint de atualização de usuário', () => {
 
   afterAll(async () => {
     await User.destroy({ where: { id: userId } });
+    server.close();
   });
 
   it('Deve atualizar o usuário com sucesso', async () => {

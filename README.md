@@ -92,16 +92,31 @@ npm install
 
 ### Executando os Testes
 Para rodar todos os testes:
+**_Obs_**: Para uma melhor desenvoltura, recomendo executar os testes nos arquivos um por vez:
 
+1. Testando o Endpoint de adicionar um usuário:
 ```bash
-npm test
+npx jest tests/adicionaUsuario.spec.ts
 ```
 
-Para rodar um teste específico:
-
+2. Testando o Endpoint de Atualizar um usuário:
 ```bash
-npx jest tests/nomeDoArquivo.spec.ts
+npx jest tests/atualizaUsuario.spec.ts
+```
 
+3. Testando o Endpoint de Deletar um usuário:
+```bash
+npx jest tests/deletaUsuario.spec.ts
+```
+
+4. Testando o Endpoint de pesquisar um usuário:
+```bash
+npx jest tests/pesquisaUsuario.spec.ts
+```
+
+5. Testando o Endpoint de pesquiar um usuário por Id:
+```bash
+npx jest tests/usuarioPorId.spec.ts
 ```
 
 ## Arquivos de Teste

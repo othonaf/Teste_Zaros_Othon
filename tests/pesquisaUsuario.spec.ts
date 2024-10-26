@@ -2,6 +2,7 @@ import request from 'supertest';
 import app from '../src/index';
 import { sequelize } from '../src/config/database';
 import User from '../src/models/user';
+import { server } from '../src/app';
 
 beforeAll(async () => {
   await sequelize.sync({ force: true });
@@ -14,6 +15,7 @@ beforeAll(async () => {
 
 afterAll(async () => {
   await sequelize.close();
+  server.close();
 });
 
 describe('GET /users', () => {
