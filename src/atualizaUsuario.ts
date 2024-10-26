@@ -14,7 +14,7 @@ router.put('/users/:id', async (req: Request, res: Response) => {
             throw new Error("Usuário não encontrado");
         }
         // Validação para verificar se "name" tem pelo menos 3 caracteres
-        if (name.length <= 3) {
+        if (name.length < 3) {
             throw new Error("O nome deve conter pelo menos 3 caracteres");
         }
 
